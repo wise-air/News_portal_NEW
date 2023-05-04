@@ -1,0 +1,60 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+
+
+
+{% block content %}
+   <hr>
+   {% if post %}
+       <table>
+           <tr>
+               <td><b>Вид публикации:</b></td>
+                   <td>{{ post.get_typeChoice_display }}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
+               <td><b>Дата публикации:</b></td>
+               <td>{{ post.pubDate|date:'d M Y'  }}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
+               <td><b>Заголовок:</b></td>
+               <td>{{ post.headline|censor:'' }}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
+               <td><b>Публикация:</b></td>
+               <td>{{ post.text|censor:''}}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
+               <td><b>Автор публикации:</b></td>
+               <td>{{ post.author.authUser }}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
+               <td><b>Рейтинг:</b></td>
+               <td>{{ post.postRating }}</td>
+           </tr>
+
+       </table>
+   {% else %}
+       <h2>Статей нет!</h2>
+   {% endif %}
+{% endblock content %}

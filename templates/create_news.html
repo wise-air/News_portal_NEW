@@ -1,0 +1,20 @@
+{% extends 'flatpages/default.html' %}
+
+
+{% block content %}
+
+<h1>Создание новости</h1>
+<hr>
+        <td>Внимание! Вы пытаетесь создать публикацию типа "Новость".</td>
+            <p>Для создания статьи, перейдите по следующей
+                <a href="http://127.0.0.1:8000/news/ART/create/">ссылке</a>.</p>
+
+    </tr>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="save" />
+</form>
+
+
+{% endblock content %}

@@ -1,0 +1,117 @@
+
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block title %}
+Публикации
+{% endblock title %}
+
+
+{% block content %}
+<!--   <h1>Все новости</h1>-->
+<!--   <h1>Всего публикаций: {{ posts|length }}</h1>-->
+   <h3>Сегодня: {{time_now|date:'d M Y' }}</h3>
+   {% if postsearch %}
+       <form action="" method="get" class="form-control">
+           {{ filterset.form.as_p }}
+           <input type="submit" value="Найти" class="form-control"/>
+
+       </form>
+   {% endif %}
+                        {% if perms.news.add_post%}
+                        <li class="nav-item">
+                           <a href="{% url 'news_create' %}">Создать новость</a>
+                       </li>
+                       {% endif %}
+                       {% if perms.news.add_post %}
+                       <li class="nav-item">
+                           <a href="{% url 'article_create' %}">Создать статью</a>
+                       </li>
+                       {% endif %}
+
+ <hr>
+   {% if posts or postsearch %}
+       <table>
+           <tr>
+               <td><b>ID</b></td>
+               <td><b>Вид публикации</b></td>
+               <td><b>Дата публикации</b></td>
+               <td><b>Заголовок</b></td>
+               <td><b>Краткое описание</b></td>
+               <td><b>Автор</b></td>
+               <td><b>Рейтинг</b></td>
+               {% if perms.news.change_post or perms.news.delete_post %}
+                <td><b>Действия</b></td>
+               {% endif %}
+           </tr>
+
+
+           {% for post in posts %}
+
+           <tr>
+               <td>{{ post.id}}</td>
+               <td>{{ post.get_typeChoice_display}}</td>
+               <td>{{ post.pubDate|date:'d M Y'}}</td>
+               <td>{{ post.headline|censor:''}}</td>
+               <td>{{ post.text|truncatechars:20|censor:''}}</td>
+               <td>{{ post.author.authUser}}</td>
+               <td>{{ post.postRating}}</td>
+               <td>
+                {% if perms.news.change_post %}
+                <a href=http://127.0.0.1:8000/news/{{post.typeChoice}}/{{post.id}}/update/>Изменить</a>
+                {% endif %}
+                {% if perms.news.delete_post %}
+                <a href=http://127.0.0.1:8000/news/{{post.typeChoice}}/{{post.id}}/delete/>Удалить</a>
+                {% endif %}
+               </td>
+
+           </tr>
+           {% endfor %}
+
+                      {% for post in postsearch %}
+
+           <tr>
+               <td>{{ post.id}}</td>
+               <td>{{ post.get_typeChoice_display}}</td>
+               <td>{{ post.pubDate|date:'d M Y'}}</td>
+               <td>{{ post.headline|censor:''}}</td>
+               <td>{{ post.text|truncatechars:20|censor:''}}</td>
+               <td>{{ post.author.authUser}}</td>
+               <td>{{ post.postRating}}</td>
+               <td>
+                {% if perms.news.change_post %}
+                <a href=http://127.0.0.1:8000/news/{{post.typeChoice}}/{{post.id}}/update/>Изменить</a>
+                {% endif %}
+                {% if perms.news.delete_post %}
+                <a href=http://127.0.0.1:8000/news/{{post.typeChoice}}/{{post.id}}/delete/>Удалить</a>
+                {% endif %}
+               </td>
+           </tr>
+           {% endfor %}
+
+       </table>
+   {% else %}
+       <h2>Статей нет!</h2>
+   {% endif %}
+
+   {% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+{% endblock content %}
