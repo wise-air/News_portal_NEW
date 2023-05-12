@@ -37,6 +37,7 @@
            <tr>
                <td><b>ID</b></td>
                <td><b>Вид публикации</b></td>
+               <td><b>Категория</b></td>
                <td><b>Дата публикации</b></td>
                <td><b>Заголовок</b></td>
                <td><b>Краткое описание</b></td>
@@ -53,8 +54,11 @@
            <tr>
                <td>{{ post.id}}</td>
                <td>{{ post.get_typeChoice_display}}</td>
+               <td>{% for category in post.postCategory.all %}
+                    <a href="http://127.0.0.1:8000/subscriptions/{{category.id}}">{{ category }}</a>
+               {% endfor %}</td>
                <td>{{ post.pubDate|date:'d M Y'}}</td>
-               <td>{{ post.headline|censor:''}}</td>
+               <td><a href=http://127.0.0.1:8000/news/{{post.id}}>{{ post.headline|censor:''}}</a></td>
                <td>{{ post.text|truncatechars:20|censor:''}}</td>
                <td>{{ post.author.authUser}}</td>
                <td>{{ post.postRating}}</td>
@@ -75,6 +79,9 @@
            <tr>
                <td>{{ post.id}}</td>
                <td>{{ post.get_typeChoice_display}}</td>
+               <td>{% for category in post.postCategory.all %}
+                         <a href="http://127.0.0.1:8000/subscriptions/{{category.id}}">{{ category }}</a>
+               {% endfor %}</td>
                <td>{{ post.pubDate|date:'d M Y'}}</td>
                <td>{{ post.headline|censor:''}}</td>
                <td>{{ post.text|truncatechars:20|censor:''}}</td>

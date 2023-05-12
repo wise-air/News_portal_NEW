@@ -1,7 +1,6 @@
 from datetime import datetime
 from django.urls import reverse_lazy
 
-# from django.shortcuts import render
 from django.views.generic import (ListView, DetailView, CreateView, UpdateView, DeleteView)
 # from django.http import HttpResponseRedirect
 from django.core.exceptions import PermissionDenied
@@ -132,3 +131,5 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
             return super().form_valid(form)
         else:
             raise PermissionDenied()
+
+

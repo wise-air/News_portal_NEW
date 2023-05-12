@@ -15,7 +15,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
            <div class="container">
-               <a class="navbar-brand" href="#">Django NEWS Portal</a>
+               <a class="navbar-brand" href="#">Новостной портал</a>
                <button class="navbar-toggler" type="button" data-toggle="collapse"
                        data-target="#navbarResponsive"
                        aria-controls="navbarResponsive" aria-expanded="false"
@@ -32,6 +32,11 @@
                        <li class="nav-item">
                            <a class="nav-link" href="/news/search/">Поиск публикации</a>
                        </li>
+                       {% if user.is_authenticated %}
+                        <li class="nav-item">
+                           <a class="nav-link" href="/subscriptions/">Подписки</a>
+                        </li>
+                        {% endif %}
                    </ul>
                </div>
 
@@ -50,18 +55,27 @@
                 {% endif %}
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="">Приветствую, {{ user }}!</a>
+                <a class="nav-link">Приветствую, {{ user }}!</a>
             </li>
             <li class="nav-item">
+                <sup>
                 <a class="nav-link" href="/accounts/logout/">Выйти (LogOut)</a>
+                </sup>
             </li>
-
-
+                {% endif %}
+                {% if user.is_authenticated == False %}
+                <li class="nav-item">
+                <sup>
+                <a class="nav-link" href="/admin">Админка</a>
+                </sup>
+            </li>
                 {% endif %}
             </ul>
             </div>
         </nav>
+        <h1>Настроена отправка сообщений в консоль, т.к. удален пароль в settings от почты</h1>
         <!-- Page content-->
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

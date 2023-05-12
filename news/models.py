@@ -30,6 +30,7 @@ class Author(models.Model):
 
 class Category(models.Model):
     catName = models.CharField(max_length=255, unique=True, verbose_name='Категория')
+    subscribers = models.ManyToManyField(User, related_name='categories', blank=True )
 
     def __str__(self):
         return f'{self.catName.title()}'
@@ -99,3 +100,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.comment.title()} (User:{self.userComm})'
+

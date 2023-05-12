@@ -21,6 +21,15 @@ Post
        <table>
            <hr>
            <tr>
+               <td><b>Категории публикации:</b></td>
+               <td>{% for category in post.postCategory.all %}
+                    {{ category }}
+               {% endfor %}</td>
+           </tr>
+       </table>
+       <table>
+           <hr>
+           <tr>
                <td><b>Дата публикации:</b></td>
                <td>{{ post.pubDate|date:'d M Y'  }}</td>
            </tr>

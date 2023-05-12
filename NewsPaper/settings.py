@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,13 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
     'django.contrib.sites',
-    'news',
+    'news.apps.NewsConfig',
     'accounts',
     'django_filters',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
+    'subscriptions',
+    'django_apscheduler',
 
 ]
 
@@ -128,12 +131,36 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
+# SOCIALACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSocialSignupForm'}
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #Настроен вывод в консоль, т.к. удален пароль в settings от почты
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "wisears"
+EMAIL_HOST_PASSWORD = ""
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+EMAIL_SUBJECT_PREFIX = 'AUTO_MESSAGE_TO_MNGR! '
+SITE_URL = 'http://127.0.0.1:8000'
+
+APSCHEDULER_DATETIME_FORMAT = 'N j, Y f:s a'
+APSCHEDULER_RUN_NOW_TIMEOUT = 25
+
+DEFAULT_FROM_EMAIL = "wisears@yandex.ru"
+SERVER_EMAIL = "wisears@yandex.ru"
+MANAGERS = (
+    ('wise_air', 'wise_air@list.ru'),
+    ('prodpartner', 'prodpartner@yandex.ru'),
+)
+ADMINS = (
+    ('wisears', 'wisears@yandex.ru'))
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'Asia/Yekaterinburg'
 
 USE_I18N = True
 

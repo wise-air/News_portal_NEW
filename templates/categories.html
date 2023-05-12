@@ -1,0 +1,62 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Подписка на рассылку
+{% endblock title %}
+
+{% block content %}
+<b>Подписка на рассылки по категориям публикаций:</b>
+<hr>
+            {{ category }}
+
+    {% if is_not_subscriber %}
+
+        <p class="text-center">
+
+            <a href="http://127.0.0.1:8000/subscriptions/{{category.id}}/subscribe" class="btn btn-secondary-sm">
+                <button>Подписаться</button>
+                <button disabled>Отписаться</button>
+            </a>
+        </p>
+
+    {% else%}
+        <p class="text-center">
+            <a href="http://127.0.0.1:8000/subscriptions/{{category.id}}/unsubscribe">
+                <button disabled>Подписаться</button>
+                <button>Отписаться</button>
+            </a>
+        </p>
+        {% endif %}
+
+ <hr>
+   {% if category_list_news %}
+       <table>
+           <tr>
+               <td><b>ID</b></td>
+               <td><b>Вид публикации</b></td>
+               <td><b>Категория</b></td>
+               <td><b>Заголовок</b></td>
+               <td><b>Краткое описание</b></td>
+               <td><b>Автор</b></td>
+               <td><b>Рейтинг</b></td>
+           </tr>
+        {% for post in category_list_news %}
+
+           <tr>
+               <td>{{ post.id}}</td>
+               <td>{{ post.get_typeChoice_display}}</td>
+               <td>{% for category in post.postCategory.all %}
+                   <a href="http://127.0.0.1:8000/subscriptions/{{category.id}}">{{ category }}</a>
+               {% endfor %}</td>
+               <td><a href=http://127.0.0.1:8000/news/{{post.id}}>{{ post.headline}}</a></td>
+               <td>{{ post.text|truncatechars:20}}</td>
+               <td>{{ post.author.authUser}}</td>
+               <td>{{ post.postRating}}</td>
+           </tr>
+           {% endfor %}
+    </table>
+   {% else %}
+       <h2>Статей нет!</h2>
+   {% endif %}
+
+{% endblock content %}
