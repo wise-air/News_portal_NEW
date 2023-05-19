@@ -14,4 +14,5 @@ urlpatterns = [
    path('NEW/<int:id>/delete/', NewsDelete.as_view(), name='news_delete'),
    path('ART/<int:id>/delete/', ArticleDelete.as_view(), name='article_delete'),
 
+
 ]

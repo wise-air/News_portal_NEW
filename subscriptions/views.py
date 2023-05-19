@@ -1,8 +1,9 @@
+from news.filters import PostFilter
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db.models import Exists, OuterRef
 from django.views.decorators.csrf import csrf_protect
-from django.views.generic import (ListView)
+from django.views.generic import ListView
 from news.models import *
 
 
@@ -42,38 +43,17 @@ def unsubscribe(request, id):
     return render(request, 'unsubscribe.html', {'category': category, 'message': message})
 
 
-# @login_required
-# @csrf_protect
-# def subscriptions(request):
-#
-#     if request.method == 'POST':
-#         category_id = request.POST.get('category_id')
-#         category = Category.objects.get(id=category_id)
-#         action = request.POST.get('action')
-#
-#         user = request.user
-#         # if not Subscription.objects.filter(id=user.id).exists():
-#         #     Category.objects.create(subscribers=user.username, catName=category)
-#
-#
-#         if action == 'subscribe':
-#             Category.objects.create(subscribers=user)#, catName=category)
-#         elif action == 'unsubscribe':
-#             Category.objects.filter(
-#                 subscribers=user,
-#             ).delete()
-#
-#
-#     categories_with_subscriptions = Category.objects.annotate(
-#         user_subscribed=Exists(
-#             Category.objects.filter(
-#                 subscribers=request.user,
-#                 catName=OuterRef('id'),
-#             )
-#         )
-#     ).order_by('catName')
-#     return render(
-#         request,
-#         'subscriptions.html',
-#         {'categories': categories_with_subscriptions},
-#     )
+
+class SubscriptionsListView(ListView):
+    model = Category
+    template_name = 'subscriptions.html'
+    context_object_name = 'subscribe_list'
+
+    def get_queryset(self):
+        category = ", ".join(Category.objects.filter(subscribers=self.request.user).values_list('catName', flat= True))
+        return category
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = Category.catName
+        return context

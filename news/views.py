@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from django.urls import reverse_lazy
 
 from django.views.generic import (ListView, DetailView, CreateView, UpdateView, DeleteView)
@@ -9,6 +9,10 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
+
+from django.http import HttpResponse
+from django.views import View
+from news.tasks import hello
 
 
 class PostList(ListView):
@@ -63,6 +67,7 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
         self.object.typeChoice = Post.news
         return super().form_valid(form)
 
+
 class ArticleCreate(PermissionRequiredMixin, CreateView):
     permission_required = ('news.add_post',)
     form_class = PostForm
@@ -73,6 +78,7 @@ class ArticleCreate(PermissionRequiredMixin, CreateView):
         self.object = form.save(commit=False)
         self.object.typeChoice = Post.article
         return super().form_valid(form)
+
 
 class NewsUpdate(PermissionRequiredMixin, UpdateView):
     permission_required = ('news.change_post',)
@@ -133,3 +139,7 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
             raise PermissionDenied()
 
 
+class IndexView(View):
+    def get(self, request):
+        hello.delay()
+        return HttpResponse('Hello! Finally we got it!')
