@@ -1,0 +1,124 @@
+2023-06-30 12:25:05,201 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:25:13,430 :: ERROR    // log // Internal Server Error: /news/log_view/
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 23, in log_view
+    logger.error("Test of error message", exc_info=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py", line 124, in emit
+    self.format(no_exc_record),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 929, in format
+    return fmt.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 671, in format
+    s = self.formatMessage(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 640, in formatMessage
+    return self._style.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 440, in format
+    return self._format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 436, in _format
+    return self._fmt % record.__dict__
+ValueError: unsupported format character '/' (0x2f) at index 45
+2023-06-30 12:25:13,433 :: ERROR    // basehttp // "GET /news/log_view/ HTTP/1.1" 500 145
+2023-06-30 12:26:38,994 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:26:39,957 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:26:45,283 :: ERROR    // log // Internal Server Error: /news/log_view/
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 23, in log_view
+    logger.error("Test of error message", exc_info=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py", line 124, in emit
+    self.format(no_exc_record),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 929, in format
+    return fmt.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 671, in format
+    s = self.formatMessage(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 640, in formatMessage
+    return self._style.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 440, in format
+    return self._format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 436, in _format
+    return self._fmt % record.__dict__
+ValueError: unsupported format character '/' (0x2f) at index 45
+2023-06-30 12:26:45,284 :: ERROR    // basehttp // "GET /news/log_view/ HTTP/1.1" 500 145
+2023-06-30 12:27:06,095 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:27:14,737 :: ERROR    // log // Internal Server Error: /news/log_view/
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 23, in log_view
+    logger.error("Test of error message", exc_info=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py", line 124, in emit
+    self.format(no_exc_record),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 929, in format
+    return fmt.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 671, in format
+    s = self.formatMessage(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 640, in formatMessage
+    return self._style.format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 440, in format
+    return self._format(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/logging/__init__.py", line 436, in _format
+    return self._fmt % record.__dict__
+ValueError: unsupported format character '/' (0x2f) at index 45
+2023-06-30 12:27:14,739 :: ERROR    // basehttp // "GET /news/log_view/ HTTP/1.1" 500 145
+2023-06-30 12:27:35,817 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:27:37,339 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:36:44,421 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:36:46,612 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:36:51,349 :: ERROR    // views // Test of error message
+2023-06-30 12:36:51,350 :: INFO     // basehttp // "GET /news/log_view/ HTTP/1.1" 200 7
+2023-06-30 12:38:56,367 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:39:01,001 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:39:06,165 :: ERROR    // log // Internal Server Error: /news/log_view/
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 23, in log_view
+    logger.security("Test of security message")
+AttributeError: 'Logger' object has no attribute 'security'
+2023-06-30 12:39:06,171 :: ERROR    // basehttp // "GET /news/log_view/ HTTP/1.1" 500 145
+2023-06-30 12:39:33,130 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:39:35,410 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:39:42,593 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py changed, reloading.
+2023-06-30 12:39:47,311 :: INFO     // autoreload // Watching for file changes with StatReloader
+2023-06-30 12:39:53,916 :: INFO     // basehttp // "GET /news/log_view/ HTTP/1.1" 200 7
+2023-06-30 12:41:41,879 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.

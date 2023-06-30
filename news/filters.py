@@ -1,4 +1,5 @@
-from django_filters import FilterSet, DateTimeFilter, ModelChoiceFilter, ModelMultipleChoiceFilter
+from django_filters import FilterSet, DateTimeFilter, \
+                            ModelChoiceFilter, ModelMultipleChoiceFilter
 from django.forms import DateTimeInput
 from .models import Post, User, Category
 
@@ -30,7 +31,6 @@ class PostFilter(FilterSet):
         label='Категория публикации',
         conjoined=True,
     )
-
 
     class Meta:
        model = Post

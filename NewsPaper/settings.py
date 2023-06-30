@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+import logging
+import sys
 from pathlib import Path
 
 
@@ -27,7 +29,7 @@ SECRET_KEY = 'django-insecure-7+yd1*r=&rdndz5r&qcgbo#0emy0cmfa-s$@=t4khu4)%34fsk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []#['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -67,6 +69,99 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'base_format': {
+            'format': '%(asctime)s :: %(levelname)-6s // %(message)s'
+        },
+        'pathname_format': {
+            'format': '%(asctime)s :: %(levelname)-6s // %(message) // %(pathname)s'
+        },
+        'module_format': {
+            'format': '%(asctime)s :: %(levelname)-6s // %(module)s // %(message)s'
+        }
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue'
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'base_format',
+            'filters': ['require_debug_true']
+        },
+        'console_warning': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+            'formatter': 'pathname_format',
+            'filters': ['require_debug_true']
+        },
+        'console_error': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            'formatter': 'pathname_format',
+            'filters': ['require_debug_true'],
+
+        },
+        'general': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'module_format',
+            'filters': ['require_debug_false'],
+            'filename': 'general.log'
+        },
+        'errors': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'formatter': 'pathname_format',
+            'filename': 'errors.log'
+        },
+        'security': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'module_format',
+            'filename': 'security.log'
+        },
+        'mail_admins': { #На почту не отправляется, т/к/ удален пароль почты. Настройки логгера отправки на почту считаю настроенным верно
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'formatter': 'pathname_format',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+    },
+    'loggers': {
+        'django': {
+            'level': 'DEBUG',
+            'handlers': ['console', 'console_warning', 'console_error', 'general'],
+            'propagate': True
+        },
+        'django.request, django.server': {
+            'level': 'ERROR',
+            'handlers': ['errors', 'mail_admins'],
+            'propagate': False
+        },
+        'django.template, django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['errors'],
+            'propagate': False
+        },
+        'django.security': {
+            'level': 'INFO',
+            'handlers': ['security'],
+            'propagate': False
+        }
+    }
+}
 
 ROOT_URLCONF = 'NewsPaper.urls'
 
@@ -187,3 +282,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+        # Указываем, куда будем сохранять кэшируемые файлы!
+        # Не забываем создать папку cache_files внутри папки с manage.py!
+    }
+}

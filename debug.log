@@ -1,0 +1,109 @@
+2023-06-29 20:03:58,027 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-29 20:18:42,781 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-29 20:19:34,047 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-29 20:19:37,010 django.request WARNING  Not Found: /apple-touch-icon-precomposed.png
+2023-06-29 20:19:37,033 django.request WARNING  Not Found: /apple-touch-icon.png
+2023-06-29 20:19:37,152 django.request WARNING  Not Found: /favicon.ico
+2023-06-29 20:19:40,731 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 199, in _publish
+    return channel.basic_publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 599, in basic_publish
+    return self._put(routing_key, message, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/redis.py", line 1012, in _put
+    client.lpush(self._q_for_pri(queue, pri), dumps(message))
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/commands/core.py", line 2706, in lpush
+    return self.execute_command("LPUSH", name, *values)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/connection.py", line 897, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 925, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 540, in _ensured
+    self._ensure_connection(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 949, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 927, in create_channel
+    channel = self.Channel(connection)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/redis.py", line 737, in __init__
+    self.client.ping()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1205, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/connection.py", line 897, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 164, in get
+    hello.delay()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 177, in publish
+    return _publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 556, in _ensured
+    errback and errback(exc, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2023-06-29 20:22:05,515 django.utils.autoreload INFO     /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-06-29 20:34:53,678 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-29 20:41:24,916 django.utils.autoreload INFO     /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.

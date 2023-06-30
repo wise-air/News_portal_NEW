@@ -14,6 +14,7 @@ from django.contrib.auth import get_user_model
 
 @shared_task
 def hello():
+    """example of working of docstring"""
     time.sleep(10)
     print("Hello! I left this message for check of working celery")
 

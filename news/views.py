@@ -1,3 +1,4 @@
+import logging
 from datetime import datetime, timedelta
 from django.urls import reverse_lazy
 
@@ -13,6 +14,25 @@ from .forms import PostForm
 from django.http import HttpResponse
 from django.views import View
 from news.tasks import hello
+
+from django.core.cache import cache
+
+logger = logging.getLogger('django')
+
+def log_view(request):
+    logger.critical("Test message")
+
+    x = 3
+    y = 2 #0  #Для примера отработки стека ошибки, можно попробовать делить на 0
+
+    logger.info(f"The values of x and y are {x} and {y}.")
+    try:
+        x / y
+        logger.info(f"x/y successful with result: {x / y}.")
+    except ZeroDivisionError as err:
+        logger.error("ZeroDivisionError", exc_info=True)
+
+    return HttpResponse('Test!!!')
 
 
 class PostList(ListView):
@@ -54,6 +74,16 @@ class PostDetail(DetailView):
     template_name = 'post.html'
     context_object_name = 'post'
     pk_url_kwarg = 'id'
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["id"]}',
+                        None)
+
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["id"]}', obj)
+
+        return obj
 
 
 class NewsCreate(PermissionRequiredMixin, CreateView):
@@ -140,6 +170,7 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
 
 
 class IndexView(View):
+    """example to see docstring"""
     def get(self, request):
         hello.delay()
         return HttpResponse('Hello! Finally we got it!')

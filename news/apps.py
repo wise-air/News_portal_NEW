@@ -6,5 +6,5 @@ class NewsConfig(AppConfig):
     name = 'news'
 
     def ready(self):
-        # from . import signals
-        import news.signals
+        from . import signals
+        # import news.signals
