@@ -26,7 +26,7 @@ class IndexView(View):
         return HttpResponse(string)
 
 
-logger = logging.getLogger('django')
+logger = logging.getLogger('django.request')
 
 
 def log_view(request):
