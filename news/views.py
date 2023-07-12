@@ -16,23 +16,33 @@ from django.views import View
 from news.tasks import hello
 
 from django.core.cache import cache
+from django.utils.translation import gettext as _
+
+
+class IndexView(View):
+    def get(self, request):
+        string = _('Hello world')
+
+        return HttpResponse(string)
+
 
 logger = logging.getLogger('django')
 
+
 def log_view(request):
-    logger.critical("Test message")
+    logger.error("Test message of error")
 
     x = 3
-    y = 2 #0  #Для примера отработки стека ошибки, можно попробовать делить на 0
+    y = 0 #0  #Для примера отработки стека ошибки, можно попробовать делить на 0
 
     logger.info(f"The values of x and y are {x} and {y}.")
     try:
         x / y
         logger.info(f"x/y successful with result: {x / y}.")
     except ZeroDivisionError as err:
-        logger.error("ZeroDivisionError", exc_info=True)
+        logger.error("ZeroDivisionError")#, exc_info=True)
 
-    return HttpResponse('Test!!!')
+    return HttpResponse("Test!!! Why doesn't work???")
 
 
 class PostList(ListView):
@@ -169,8 +179,8 @@ class ArticleDelete(PermissionRequiredMixin, DeleteView):
             raise PermissionDenied()
 
 
-class IndexView(View):
-    """example to see docstring"""
-    def get(self, request):
-        hello.delay()
-        return HttpResponse('Hello! Finally we got it!')
+# class IndexView(View):
+#     """example to see docstring"""
+#     def get(self, request):
+#         hello.delay()
+#         return HttpResponse('Hello! Finally we got it!')

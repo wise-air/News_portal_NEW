@@ -1,1 +1,396 @@
 2023-06-30 00:31:16,842 ERROR    Test of error message /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-03 15:01:08,569 :: WARNING // views // Test message
+2023-07-03 15:01:08,571 :: INFO   // views // The values of x and y are 3 and 0.
+2023-07-03 15:01:08,571 :: ERROR  // views // ZeroDivisionError
+2023-07-03 15:21:34,303 :: INFO   // autoreload // Watching for file changes with StatReloader
+2023-07-03 15:21:36,982 :: CRITICAL // views // Test message
+2023-07-03 15:21:37,007 :: ERROR  // views // The values of x and y are 3 and 0.
+2023-07-03 15:21:37,097 :: ERROR  // views // ZeroDivisionError
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:22:32,948 :: INFO   // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-07-03 15:23:02,216 :: INFO   // autoreload // Watching for file changes with StatReloader
+2023-07-03 15:23:05,641 :: CRITICAL // views // Test message
+2023-07-03 15:23:05,664 :: ERROR  // views // The values of x and y are 3 and 0.
+2023-07-03 15:23:05,681 :: ERROR  // views // ZeroDivisionError
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:23:24,969 :: INFO   // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-07-03 15:23:28,141 :: CRITICAL // views // Test message
+2023-07-03 15:23:28,154 :: ERROR  // views // The values of x and y are 3 and 0.
+2023-07-03 15:23:28,161 :: ERROR  // views // ZeroDivisionError
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:24:28,883 :: CRITICAL // views // Test message
+2023-07-03 15:24:28,883 :: ERROR  // views // ZeroDivisionError
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:26:09,464 :: CRITICAL // views // Test message // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-03 15:26:09,465 :: ERROR  // views // ZeroDivisionError // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:26:27,790 :: CRITICAL // views // Test message // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-03 15:26:27,791 :: ERROR  // views // ZeroDivisionError // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:27:04,765 :: CRITICAL // views // Test message // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-03 15:27:04,765 :: ERROR  // views // ZeroDivisionError // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:28:17,508 :: CRITICAL @@@ views @@@ Test message @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-03 15:28:17,510 :: ERROR  @@@ views @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 30, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-03 15:29:00,449 :: CRITICAL @@@ views @@@ Test message @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-05 15:29:26,131 :: ERROR  @@@ log @@@ Internal Server Error: / @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 925, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 949, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 927, in create_channel
+    channel = self.Channel(connection)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/redis.py", line 737, in __init__
+    self.client.ping()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1205, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/connection.py", line 897, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 183, in get
+    hello.delay()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 177, in publish
+    return _publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 186, in _publish
+    channel = self.channel
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2023-07-05 15:29:26,138 :: ERROR  @@@ basehttp @@@ "GET / HTTP/1.1" 500 246022 @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py
+2023-07-05 15:30:41,401 :: ERROR  @@@ log @@@ Internal Server Error: / @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 925, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 949, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/virtual/base.py", line 927, in create_channel
+    channel = self.Channel(connection)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/transport/redis.py", line 737, in __init__
+    self.client.ping()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1205, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1269, in execute_command
+    return conn.retry.call_with_retry(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1270, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/redis/connection.py", line 897, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 183, in get
+    hello.delay()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/celery/app/amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 177, in publish
+    return _publish(
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 186, in _publish
+    channel = self.channel
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: MISCONF Redis is configured to save RDB snapshots, but it's currently unable to persist to disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+2023-07-05 15:30:41,407 :: ERROR  @@@ basehttp @@@ "GET / HTTP/1.1" 500 246022 @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py
+2023-07-10 15:57:52,521 :: ERROR  @@@ views @@@ Test message of warning @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-10 15:59:16,268 :: ERROR  @@@ views @@@ Test message of warning @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-10 16:07:42,540 :: ERROR  @@@ None @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-10 16:08:23,034 :: ERROR  @@@ None @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-10 16:08:23,036 :: ERROR  @@@ (<class 'ZeroDivisionError'>, ZeroDivisionError('division by zero'), <traceback object at 0x7fe86e92ab00>) @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 38, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-11 13:28:23,039 :: ERROR  @@@ Test message of error
+2023-07-11 13:28:23,040 :: ERROR  @@@ The values of x and y are 3 and 0.
+2023-07-11 13:28:23,041 :: ERROR  @@@ ZeroDivisionError
+2023-07-11 13:43:36,133 :: ERROR  @@@ views @@@ Test message of error
+2023-07-11 13:43:36,133 :: ERROR  @@@ views @@@ The values of x and y are 3 and 0.
+2023-07-11 13:43:36,133 :: ERROR  @@@ views @@@ ZeroDivisionError
+2023-07-11 13:48:26,998 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:48:26,998 :: ERROR  @@@ The values of x and y are 3 and 0. @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:48:26,998 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:49:45,219 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:49:45,221 :: ERROR  @@@ The values of x and y are 3 and 0. @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:49:45,221 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:50:50,315 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:50:50,315 :: ERROR  @@@ The values of x and y are 3 and 0. @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:50:50,315 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:51:44,541 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:51:44,541 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ### None
+2023-07-11 13:52:31,408 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###
+2023-07-11 13:52:31,408 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###
+2023-07-11 13:55:01,262 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:55:01,262 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 40, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-11 13:56:48,729 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:56:48,729 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:01,890 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:01,891 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:22,288 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:22,288 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:39,052 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 13:58:39,052 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 16:44:12,583 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 16:44:12,585 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 16:45:38,402 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###{exc_info}
+2023-07-11 16:45:38,402 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###{exc_info}
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 40, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-11 16:46:10,958 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###{exc_info}
+2023-07-11 16:46:10,958 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py ###{exc_info}
+2023-07-11 16:49:00,608 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-11 16:49:00,608 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 11:31:51,557 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 11:31:51,558 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:18:57,007 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py, exc_info=True)
+2023-07-12 13:18:57,009 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py, exc_info=True)
+2023-07-12 13:22:50,153 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:22:50,153 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:24:17,046 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py thread 123145355644928
+2023-07-12 13:24:17,047 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py thread 123145355644928
+2023-07-12 13:27:35,068 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:27:35,068 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:28:02,201 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:28:02,201 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:45:32,232 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:45:32,234 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:47:08,440 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:47:08,441 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:53:03,532 :: ERROR  sys.exc_info @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 13:53:03,534 :: ERROR  sys.exc_info @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:04:24,395 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:04:24,397 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:05:30,389 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:05:30,389 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:06:51,230 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:06:51,231 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:10:52,610 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:10:52,611 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:13:11,091 :: ERROR  @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:13:11,091 :: ERROR  @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py
+2023-07-12 14:31:00,930
+2023-07-12 14:31:00,931
+2023-07-12 14:31:29,639
+2023-07-12 14:31:29,639
+2023-07-12 14:32:20,688 :: ERROR
+2023-07-12 14:32:20,689 :: ERROR
+2023-07-12 14:32:52,281 :: ERROR None
+2023-07-12 14:32:52,281 :: ERROR None
+2023-07-12 14:33:25,852 :: ERROR None
+2023-07-12 14:33:25,852 :: ERROR None
+2023-07-12 14:34:30,274 :: ERROR-6s @@@ Test message of error @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py stack None
+2023-07-12 14:34:30,274 :: ERROR-6s @@@ ZeroDivisionError @@@ /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py stack None
+2023-07-12 14:52:05,565 уровень:ERROR-6s сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 14:52:05,565 уровень:ERROR-6s сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 14:57:46,097 уровень:ERROR-6s сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 14:57:46,097 уровень:ERROR-6s сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:01:41,241 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:01:41,241 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:26:27,616 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:26:27,617 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:26:51,124 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:26:51,125 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:(<class 'ZeroDivisionError'>, ZeroDivisionError('division by zero'), <traceback object at 0x7fe182003480>)
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 40, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-12 15:31:11,578 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:31:11,580 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:(<class 'ZeroDivisionError'>, ZeroDivisionError('division by zero'), <traceback object at 0x7fc2a8134dc0>)
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py", line 40, in log_view
+    x / y
+ZeroDivisionError: division by zero
+2023-07-12 15:31:35,830 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:31:35,830 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:39:55,108 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:39:55,110 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:49:39,320 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:49:39,322 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:49:49,162 уровень:ERROR сообщение:Internal Server Error: /news/search/ путь:/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py стек ошибки:(<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('neaws.html, news/post_list.html'), <traceback object at 0x7fbaa98c0080>)
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: neaws.html, news/post_list.html
+2023-07-12 15:49:49,164 уровень:ERROR сообщение:"GET /news/search/ HTTP/1.1" 500 86284 путь:/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py стек ошибки:None
+2023-07-12 15:51:04,601 уровень:ERROR сообщение:Internal Server Error: /news/search/ путь:/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/utils/log.py стек ошибки:(<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('neaws.html, news/post_list.html'), <traceback object at 0x7fc1c5a69dc0>)
+Traceback (most recent call last):
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: neaws.html, news/post_list.html
+2023-07-12 15:51:04,603 уровень:ERROR сообщение:"GET /news/search/ HTTP/1.1" 500 85969 путь:/Users/wiseair/PycharmProjects/News_portal_NEW/venv/lib/python3.8/site-packages/django/core/servers/basehttp.py стек ошибки:None
+2023-07-12 15:51:36,884 уровень:ERROR сообщение:Test message of error путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None
+2023-07-12 15:51:36,884 уровень:ERROR сообщение:ZeroDivisionError путь:/Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/news/views.py стек ошибки:None

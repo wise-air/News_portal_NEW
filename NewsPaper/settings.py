@@ -62,6 +62,7 @@ LOGOUT_REDIRECT_URL = '/news'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware', #добавлено для локализации
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -75,14 +76,26 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'base_format': {
-            'format': '%(asctime)s :: %(levelname)-6s // %(message)s'
+            'format': '%(asctime)s :: %(levelname)-6s @@@ %(message)s'
         },
-        'pathname_format': {
-            'format': '%(asctime)s :: %(levelname)-6s // %(message) // %(pathname)s'
+        'warning_format': {
+            'format': '%(asctime)s :: %(levelname)-6s @@@ %(message)s @@@ %(pathname)s'
         },
-        'module_format': {
-            'format': '%(asctime)s :: %(levelname)-6s // %(module)s // %(message)s'
-        }
+        'error_format': {
+            'format': '{asctime} уровень:{levelname} сообщение:{message} путь:{pathname} стек ошибки:{exc_info}',
+            'style': '{',
+        },
+        'error_email_format': {
+            'format': '%(asctime)s уровень:%(levelname)s сообщение:%(message)s путь:%(pathname)s',
+        },
+        'info_format': {
+            'format': '{asctime} :: {levelname} :: {module}',
+            'style': '{',
+        },
+        'security_format': {
+            'format': '{asctime} :: {levelname} :: {module} :: {message}',
+            'style': '{',
+        },
     },
     'filters': {
         'require_debug_false': {
@@ -102,39 +115,38 @@ LOGGING = {
         'console_warning': {
             'level': 'WARNING',
             'class': 'logging.StreamHandler',
-            'formatter': 'pathname_format',
+            'formatter': 'warning_format',
             'filters': ['require_debug_true']
         },
         'console_error': {
             'level': 'ERROR',
             'class': 'logging.StreamHandler',
-            'formatter': 'pathname_format',
-            'filters': ['require_debug_true'],
-
+            'formatter': 'error_format',
+            'filters': ['require_debug_true']
         },
         'general': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'formatter': 'module_format',
+            'formatter': 'info_format',
             'filters': ['require_debug_false'],
-            'filename': 'general.log'
+            'filename': 'general.log',
         },
-        'errors': {
+        'errors1': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'formatter': 'pathname_format',
-            'filename': 'errors.log'
+            'formatter': 'error_format',
+            'filename': 'errors.log',
         },
         'security': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'formatter': 'module_format',
-            'filename': 'security.log'
+            'formatter': 'security_format',
+            'filename': 'security.log',
         },
         'mail_admins': { #На почту не отправляется, т/к/ удален пароль почты. Настройки логгера отправки на почту считаю настроенным верно
             'level': 'ERROR',
             'filters': ['require_debug_false'],
-            'formatter': 'pathname_format',
+            'formatter': 'error_email_format',
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
         },
@@ -145,14 +157,24 @@ LOGGING = {
             'handlers': ['console', 'console_warning', 'console_error', 'general'],
             'propagate': True
         },
-        'django.request, django.server': {
+        'django.request': {
             'level': 'ERROR',
-            'handlers': ['errors', 'mail_admins'],
+            'handlers': ['errors1', 'mail_admins'],
             'propagate': False
         },
-        'django.template, django.db.backends': {
+        'django.server': {
             'level': 'ERROR',
-            'handlers': ['errors'],
+            'handlers': ['errors1', 'mail_admins'],
+            'propagate': False
+        },
+        'django.template': {
+            'level': 'ERROR',
+            'handlers': ['errors1'],
+            'propagate': False
+        },
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['errors1'],
             'propagate': False
         },
         'django.security': {
@@ -260,14 +282,17 @@ CELERY_TIMEZONE = 'Asia/Yekaterinburg'
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Asia/Yekaterinburg'
 
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -122,3 +122,10 @@ AttributeError: 'Logger' object has no attribute 'security'
 2023-06-30 12:39:47,311 :: INFO     // autoreload // Watching for file changes with StatReloader
 2023-06-30 12:39:53,916 :: INFO     // basehttp // "GET /news/log_view/ HTTP/1.1" 200 7
 2023-06-30 12:41:41,879 :: INFO     // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-07-03 14:40:07,332 :: INFO   // autoreload // Watching for file changes with StatReloader
+2023-07-03 14:43:00,267 :: INFO   // autoreload // /Users/wiseair/PycharmProjects/News_portal_NEW/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-07-12 15:58:26,707 :: INFO :: autoreload
+2023-07-12 15:58:31,489 :: ERROR :: views
+2023-07-12 15:58:31,490 :: INFO :: views
+2023-07-12 15:58:31,490 :: ERROR :: views
+2023-07-12 15:59:58,121 :: INFO :: autoreload
